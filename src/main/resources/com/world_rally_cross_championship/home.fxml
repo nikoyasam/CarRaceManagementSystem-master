@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import java.net.URL?>
+<BorderPane fx:id="root" maxHeight="720.0" maxWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.HomeController">
+<!--    <stylesheets>-->
+<!--        <URL value="@css/dark-blue.css" />-->
+<!--    </stylesheets>-->
+    <left>
+        <TabPane fx:id="tabPane" prefHeight="720.0" prefWidth="1281.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab fx:id="driversTab" text="Drivers">
+                   <content>
+                       <fx:include fx:id="driversController" source="drivers.fxml" />
+                   </content>
+                </Tab>
+                <Tab text="Standings">
+                    <content>
+                        <fx:include source="standings.fxml" />
+                    </content>
+                </Tab>
+                <Tab text="Random Race">
+                   <content>
+                       <fx:include source="random-race.fxml" />
+                   </content>
+                </Tab>
+                <Tab fx:id="raceHistoryTab" onSelectionChanged="#initialize" text="Race History">
+                   <content>
+                       <fx:include source="race-history.fxml" />
+                   </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

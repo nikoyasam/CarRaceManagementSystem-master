@@ -1,0 +1,3 @@
+Grace Lee,23,Williams,FW43B,10,1
+Hailey Lee,29,Aston Martin,AMR21,7,2
+Isabella Davis,25,AlphaTauri,AT02,5,3

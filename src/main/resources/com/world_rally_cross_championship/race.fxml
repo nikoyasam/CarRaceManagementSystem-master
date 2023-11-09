@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<?import java.net.URL?>
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.RaceController">
+<!--    <stylesheets>-->
+<!--        <URL value="@css/dark-blue.css" />-->
+<!--    </stylesheets>-->
+    <children>
+      <Pane prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="33.0" prefHeight="46.0" prefWidth="1260.0" text="Race Name" textAlignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="backButton" layoutX="11.0" layoutY="656.0" mnemonicParsing="false" onAction="#onBack" prefHeight="34.0" prefWidth="1254.0" text="Back" />
+         </children>
+      </Pane>
+      <TableView fx:id="resultsTable" layoutX="12.0" layoutY="96.0" prefHeight="545.0" prefWidth="1254.0">
+          <columns>
+              <TableColumn prefWidth="114.0" text="Place">
+                  <cellValueFactory>
+                      <PropertyValueFactory property="place" />
+                  </cellValueFactory>
+              </TableColumn>
+              <TableColumn prefWidth="150" text="Name">
+                  <cellValueFactory>
+                      <PropertyValueFactory property="name" />
+                  </cellValueFactory>
+              </TableColumn>
+              <TableColumn prefWidth="75" text="Age">
+                  <cellValueFactory>
+                      <PropertyValueFactory property="age" />
+                  </cellValueFactory>
+              </TableColumn>
+              <TableColumn prefWidth="150" text="Team">
+                  <cellValueFactory>
+                      <PropertyValueFactory property="team" />
+                  </cellValueFactory>
+              </TableColumn>
+              <TableColumn prefWidth="111.0" text="Car">
+                  <cellValueFactory>
+                      <PropertyValueFactory property="car" />
+                  </cellValueFactory>
+              </TableColumn>
+              <TableColumn prefWidth="75" text="Points">
+                  <cellValueFactory>
+                      <PropertyValueFactory property="points" />
+                  </cellValueFactory>
+              </TableColumn>
+          </columns>
+      </TableView>
+   </children>
+</AnchorPane>
